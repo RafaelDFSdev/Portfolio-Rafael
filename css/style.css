@@ -112,5 +112,8 @@ footer{
     .responsive-menu{
         display: flex;
     }
+    .profile img{
+        max-width: 30% ;
+    }
 
 }
