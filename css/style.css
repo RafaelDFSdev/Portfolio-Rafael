@@ -10,6 +10,8 @@ header{
     padding: 10px;
     background-color: rgb(59, 56, 56);
     color: white;
+    justify-content: space-between;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 header a{
     text-decoration: none;
@@ -52,6 +54,7 @@ hr{
 .sobre-mim{
     display: flex;
     justify-content: space-around;
+    margin-bottom: 50px;
 
 }
 .estudos{
@@ -88,4 +91,26 @@ hr{
     align-self: flex-start;
     margin-top: 50px;
     padding: 3px;
+}
+footer{
+    padding: 10px;
+    background-color: rgb(59, 56, 56);
+    color: white;
+    text-align: center;
+}
+.responsive-menu{
+    display: none;
+}
+@media (max-width: 999px){
+    nav{
+        display: none;
+    }
+    .sobre-mim{
+       flex-direction: column; 
+       align-items: center;
+    }
+    .responsive-menu{
+        display: flex;
+    }
+
 }
