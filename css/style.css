@@ -12,6 +12,8 @@ header{
     color: white;
     justify-content: space-between;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: fixed;
+    width: 100vw;
 }
 header a{
     text-decoration: none;
@@ -23,6 +25,9 @@ header a:hover{
 }
 nav{
     margin-left: 20px;
+}
+main{
+    padding-top: 50px;
 }
 .profile{
     background-color: darkgray;
