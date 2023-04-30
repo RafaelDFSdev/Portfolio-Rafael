@@ -31,6 +31,9 @@ nav{
     margin-left: 20px;
     overflow-y: hidden;
 }
+main{
+    padding-top: 50px;
+}
 .profile{
     background-color: darkgray;
     text-align: center;
