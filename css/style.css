@@ -1,13 +1,9 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
-    overflow-x: hidde;
+    box-sizing: border-box;   
+    overflow-x: unset;
 }
-body{
-    overflow-x: hidden;
-}
-
 header{
     display: flex;
     align-items: center;
@@ -16,23 +12,50 @@ header{
     color: white;
     justify-content: space-between;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    position: fixed;
-    width: 100vw;
+    
+    width: 100%;
 }
 header a{
     text-decoration: none;
     padding: 20px;
     color: white;
 }
+#menu{
+    border: 1px solid black;
+    color: white;
+    background-color: gray;
+    padding: 5px;
+    margin: 1rem;
+    cursor: pointer;
+    font-size: large;
+    display: none;
+}
+#menu:active {
+    background-color: black;
+    color: white;
+}
 header a:hover{
     color: gray;
 }
-nav{
-    margin-left: 20px;
-    overflow-y: hidden;
+.responsive{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    height: 0;
+    background-color: rgb(59, 56, 56);
+    font-size: large;
+    transition: 0.5s ;
+    overflow: hidden;
 }
-main{
-    padding-top: 50px;
+.responsive a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.responsive a:hover{
+    color: grey;
 }
 .profile{
     background-color: darkgray;
@@ -64,9 +87,11 @@ hr{
 }
 .sobre-mim{
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 50px;
-
+    justify-content: center;
+    gap: 10%;
+    width: 100%;
+    margin: 0 auto 50px;
+    
 }
 .estudos{
     color: rgb(73, 70, 70) ;
@@ -82,7 +107,8 @@ hr{
     margin-top: 50px;
     padding: 10px; 
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
+       
 }
 .estudos img{
     max-width: 90%;
@@ -108,8 +134,7 @@ hr{
     font-family: 'Quicksand', sans-serif;
 }
 .visitar:hover{
-    background-color: black;
-    color: white;
+    background-color: gray;
     transition: 0.2s;
 
 }
@@ -118,62 +143,102 @@ footer{
     background-color: rgb(59, 56, 56);
     color: white;
     text-align: center;
-    width: 100vw;
+    width: 100%;
 }
-.responsive-menu{
-    display: none;
+.show{
+    height: auto;
+    padding: 1rem;
+    background-color: rgb(59, 56, 56);
 }
 .goals{
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
     padding: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgb(73, 70, 70);
     text-align: center;
-    margin-bottom: 50px;
+    
+    
 }
 .goals h1{
     margin-bottom: 30px;
 }
 .cards{
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
-    
-    
 }
 .card{
     display: flex;
+    flex-direction: column;
     font-size: 80%;
     border: 1px solid;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 1rem;
-    height: 200px;
-    width: 90vw;
-    margin: 20px;
+    height: auto;
+    width: 40vw;
+    margin: 2rem auto;
 }
 .card img{
+    width: 30%;
     border-radius: 20px;
-    margin-right: 10px;
+    margin: auto;
 }
 .about-card{
     padding: 10px;
-
 }
 .about-card p{
-    font-size: 15px;
+    font-size: 20px;
     margin: 10px;
 }
+.contact{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(73, 70, 70);
+    height: 50vh;
+}
+.social{
+    display: flex;
+    flex-direction: column;
+    margin: 3rem auto;
+    gap: 1rem;
+}
+.social a{
+    color:rgb(73, 70, 70);
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 5px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    gap: 5px;
+}
+.social a img{
+    max-width: 20%;
+}
+.social a:hover{
+    background-color: gray;
+    color: white;
+    transition: 0.5s;
+}
 @media (max-width: 999px){
-    nav{
+    .nav-desktop{
         display: none;
     }
+    
     .sobre-mim{
-       flex-direction: column; 
-       align-items: center;
+        flex-direction: column; 
+        align-items: center;
+        background-image: url(/img/top.png);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
-    .responsive-menu{
+    #menu{
         display: flex;
     }
     .profile img{
@@ -190,5 +255,12 @@ footer{
     }
     .card img{
         display: none;
+    }
+    .card p{
+        font-size: 15px;
+    }
+    .contact{
+        background-image: url(/img/bottom.png);
+        background-size: cover;
     }
 }

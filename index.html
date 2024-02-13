@@ -12,16 +12,20 @@
         <h1>
             Rafael Portfolio
         </h1>
-        <nav>
-            <a href="#">Home</a>
+        <nav class="nav-desktop">
+            <a href="index.html">Home</a>
             <a href="#">About</a>
             <a href="#">Contact</a>
             <a href="#">Projects</a>
         </nav>
-        <nav class="responsive-menu">
-            <a href="#">Menu</a>
-        </nav>
+            <button onclick="showNav()" id="menu">Menu</button>
     </header>
+    <nav class="responsive">
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Projects</a>
+    </nav>
     <main>
         <div class="profile">
             <img src="img/rafael.jpg" alt="">
@@ -71,7 +75,18 @@
                 </div>
             </div>    
         </div>
+        <hr>
+        <div class="contact">
+            <h1>Fale comigo</h1>
+            <div class="social">
+                <a href="https://www.linkedin.com/in/rafael-santos-3a0896274/"><img src="img/logotipo-do-linkedin.png" alt=""> LINKEDIN</a>
+                <a href="https://github.com/RafaelDFSdev"><img src="img/placa-do-github.png" alt=""> GITHUB</a>
+                <a href="https://www.instagram.com/rafaaa_tlgd/"><img src="img/instagram.png" alt=""> INSTAGRAM</a>
+                <a href="https://https://wa.me/5511943560495"><img src="img/whatsapp.png" alt=""> WHATSAPP</a>
+            </div>
+        </div>
     </main>
     <footer>®Rafael Santos</footer>
+    <script src="script/script.js"></script>
 </body>
 </html>
